@@ -55,16 +55,9 @@ public class HistoryVacationRequests {
 	@Test
 	public void createSimpleVacation() throws ParseException {
 		loginSteps.login("andra.farcas", "andra");
-		newVacationRequestSteps.new_request();
-		newVacationRequestSteps.select_start_date();
-		newVacationRequestSteps.select_date(7, 17, 2014);
-		newVacationRequestSteps.select_end_date();
-		newVacationRequestSteps.select_date(7, 18, 2014);
 		myRequestsSteps.my_request();
-		myFreeDaysSteps.my_free_days();
-		freeDaysHistorySteps.free_days_history();
-		inboxSteps.inbox();
-		viewVacationsSteps.viewVacations();
+		myRequestsSteps.select_vacation();
+		myRequestsSteps.apply_filter();
 		
 
 	}

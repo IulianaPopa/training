@@ -7,10 +7,10 @@ import net.thucydides.core.pages.WebElementFacade;
 //@DefaultUrl("http://en.wiktionary.org/wiki/Wiktionary:Main_Page")
 public class MyRequestsPage extends PageObject {
 
-    @FindBy(css="input[name='HOLIDAYCheckbox']")
+    @FindBy(css="input[value='HOLIDAY'][type='checkbox']")
     private WebElementFacade hOLIDAYCheckbox;
     
-    @FindBy(css="input[name='applyButton']")
+    @FindBy(css="input.aui-button-input")
     private WebElementFacade applyButton;
         
     public void click_holidaycheckbox() {
