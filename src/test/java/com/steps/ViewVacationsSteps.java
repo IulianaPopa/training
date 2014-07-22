@@ -6,12 +6,12 @@ import net.thucydides.core.steps.ScenarioSteps;
 import com.pages.VacationManagementMenuPage;
 
 @SuppressWarnings("serial")
-public class InboxSteps extends ScenarioSteps {
+public class ViewVacationsSteps extends ScenarioSteps {
 	VacationManagementMenuPage vacationManagementMenuPage;
 
+	
 	@Step
-	public void inbox() {
-		vacationManagementMenuPage.click_inbox();
+	public void viewVacations() {
+		vacationManagementMenuPage.click_viewVacations();
 	}
-
 }
