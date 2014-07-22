@@ -37,6 +37,9 @@ public class CreateVacationTest {
     public void createSimpleVacation() throws ParseException {
     	loginSteps.login("andra.farcas", "andra");
     	newVacationRequestSteps.new_request();
-    	newVacationRequestSteps.select_date(10, 11, 2014);
+    	newVacationRequestSteps.select_start_date();
+    	newVacationRequestSteps.select_date(10,7, 2015);
+    	newVacationRequestSteps.select_end_date();
+    	newVacationRequestSteps.select_date(11,7, 2015);
     }
 } 
