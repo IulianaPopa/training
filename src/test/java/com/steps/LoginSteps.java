@@ -33,7 +33,7 @@ public class LoginSteps extends ScenarioSteps {
     
     @Step
     public void select_vacation_tab() {
-    	loginPage.click_vacation();
+		loginPage.click_vacation();
     }
     
     @StepGroup

@@ -9,7 +9,6 @@ import com.pages.VacationManagementMenuPage;
 public class ViewVacationsSteps extends ScenarioSteps {
 	VacationManagementMenuPage vacationManagementMenuPage;
 
-	
 	@Step
 	public void viewVacations() {
 		vacationManagementMenuPage.click_viewVacations();

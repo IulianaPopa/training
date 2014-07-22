@@ -34,7 +34,7 @@ public class LoginPage extends PageObject {
     	submitButton.click();
     }
     
-    public void click_vacation() {
+	public void click_vacation() {
     	element(vacationTab).waitUntilVisible();
     	vacationTab.click();
     }

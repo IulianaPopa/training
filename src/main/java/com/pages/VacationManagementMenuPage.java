@@ -12,14 +12,12 @@ public class VacationManagementMenuPage extends PageObject {
 
 	@FindBy(css = "a[href*='view-vacations']")
 	private WebElementFacade viewVacationsMenuItem;
-	
-	
+
 	public void click_inbox() {
 		element(inboxMenuItem).waitUntilVisible();
 		element(inboxMenuItem).click();
 	}
 
-	
 	public void click_viewVacations() {
 		element(viewVacationsMenuItem).waitUntilVisible();
 		element(viewVacationsMenuItem).click();

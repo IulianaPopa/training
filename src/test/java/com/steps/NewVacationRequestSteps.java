@@ -7,10 +7,11 @@ import net.thucydides.core.steps.ScenarioSteps;
 
 import com.pages.CalendarPage;
 import com.pages.VacationMenuPage;
-//import com.pages.StartEndDateNewVacation;
+import com.pages.StartEndDateNewVacation;
 
 @SuppressWarnings("serial")
 public class NewVacationRequestSteps extends ScenarioSteps {
+	StartEndDateNewVacation startEndDateNewVacation;
 
 	VacationMenuPage vacationMenuPage;
 	CalendarPage calendarPage;
@@ -22,12 +23,12 @@ public class NewVacationRequestSteps extends ScenarioSteps {
 
 	@Step
 	public void select_start_date() {
-		vacationMenuPage.click_startDate();
+		startEndDateNewVacation.click_startDate();
 	}
 
 	@Step
 	public void select_end_date() {
-		vacationMenuPage.click_endDate();
+		startEndDateNewVacation.click_endDate();
 	}
 
 	public void select_start_date(int month, int day, int year)

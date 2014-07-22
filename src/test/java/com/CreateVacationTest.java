@@ -21,7 +21,7 @@ import com.steps.MyRequestsSteps;
 import com.steps.NewVacationRequestSteps;
 import com.steps.InboxSteps;
 import com.steps.ViewVacationsSteps;
-
+import com.steps.VacationMenuSteps;
 @Story(Application.Search.SearchByKeyword.class)
 @RunWith(ThucydidesRunner.class)
 public class CreateVacationTest {
@@ -52,6 +52,10 @@ public class CreateVacationTest {
 	
 	@Steps
 	ViewVacationsSteps viewVacationsSteps;
+	
+	
+	@Steps
+	VacationMenuSteps vacationMenuSteps;
 	@Test
 	public void createSimpleVacation() throws ParseException {
 		loginSteps.login("andra.farcas", "andra");
@@ -60,12 +64,15 @@ public class CreateVacationTest {
 		newVacationRequestSteps.select_date(7, 17, 2014);
 		newVacationRequestSteps.select_end_date();
 		newVacationRequestSteps.select_date(7, 18, 2014);
-		myRequestsSteps.my_request();
+		/*myRequestsSteps.my_request();
 		myFreeDaysSteps.my_free_days();
-		freeDaysHistorySteps.free_days_history();
+		freeDaysHistorySteps.free_days_history();*/
 		inboxSteps.inbox();
 		viewVacationsSteps.viewVacations();
 		
+		vacationMenuSteps.my_request();
+		vacationMenuSteps.my_free_days();
+		vacationMenuSteps.free_days_history();
 
 	}
 }
