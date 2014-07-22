@@ -15,6 +15,9 @@ public class LoginPage extends PageObject {
 
     @FindBy(className="aui-button-input-submit")
     private WebElementFacade submitButton;
+    
+    @FindBy(css="ul.main-menu li:nth-child(2) a")
+    private WebElementFacade vacationTab;
 
     public void enter_username(String user) {
         element(username).waitUntilVisible();
@@ -28,5 +31,10 @@ public class LoginPage extends PageObject {
     
     public void click_submit() {
     	submitButton.click();
+    }
+    
+    public void click_vacation() {
+    	element(vacationTab).waitUntilVisible();
+    	vacationTab.click();
     }
 }

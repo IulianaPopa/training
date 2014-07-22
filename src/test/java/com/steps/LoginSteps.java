@@ -31,11 +31,17 @@ public class LoginSteps extends ScenarioSteps {
     	loginPage.click_submit();
     }
     
+    @Step
+    public void select_vacation_tab() {
+    	loginPage.click_vacation();
+    }
+    
     @StepGroup
     public void login(String username, String password) {
     	open();
     	enter_username(username);
     	enter_password(password);
     	submit();
+    	select_vacation_tab();
     }
 }
