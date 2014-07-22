@@ -18,7 +18,7 @@ public class LoginPage extends PageObject {
     
     @FindBy(css="ul.main-menu li:nth-child(2) a")
     private WebElementFacade vacationTab;
-
+    
     public void enter_username(String user) {
         element(username).waitUntilVisible();
         element(username).sendKeys(user);

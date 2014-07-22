@@ -1,5 +1,7 @@
 package com;
 
+import java.text.ParseException;
+
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
 import net.thucydides.core.annotations.Steps;
@@ -13,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.requirements.Application;
 import com.steps.LoginSteps;
+import com.steps.NewVacationRequestSteps;
 
 @Story(Application.Search.SearchByKeyword.class)
 @RunWith(ThucydidesRunner.class)
@@ -26,9 +29,14 @@ public class CreateVacationTest {
 
     @Steps
     public LoginSteps loginSteps;
+    
+    @Steps
+    NewVacationRequestSteps newVacationRequestSteps;
 
     @Test
-    public void createSimpleVacation() {
-    	loginSteps.login("ciprian.mocian", "test");
+    public void createSimpleVacation() throws ParseException {
+    	loginSteps.login("andra.farcas", "andra");
+    	newVacationRequestSteps.new_request();
+    	newVacationRequestSteps.select_date(10, 11, 2014);
     }
 } 
