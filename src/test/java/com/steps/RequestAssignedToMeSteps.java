@@ -13,7 +13,7 @@ public class RequestAssignedToMeSteps extends ScenarioSteps {
 
 	@Step
 	public void inbox() {
-		vacationManagementMenuPage.click_inbox();
+		requestsAssignedToMePage.click_inbox();
 	}
 
 	@Step
@@ -45,4 +45,10 @@ public class RequestAssignedToMeSteps extends ScenarioSteps {
 	public void reject_display_request() {
 		requestsAssignedToMePage.click_reject_displayRequest();
 	}
+	@Step
+	public void select_items_per_page(String value) {
+		requestsAssignedToMePage.select_drop_down_list(value);
+	}
+	
+	
 }

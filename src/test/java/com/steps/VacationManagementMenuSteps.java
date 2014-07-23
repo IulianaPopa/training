@@ -9,10 +9,10 @@ import com.pages.VacationManagementMenuPage;
 public class VacationManagementMenuSteps extends ScenarioSteps {
 	VacationManagementMenuPage vacationManagementMenuPage;
 
-	@Step
-	public void inbox() {
-		vacationManagementMenuPage.click_inbox();
-	}
+//	@Step
+//	public void inbox() {
+//		vacationManagementMenuPage.click_inbox();
+//	}
 
 	@Step
 	public void viewVacations() {
