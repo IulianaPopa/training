@@ -41,6 +41,7 @@ public class DaysNumberRequests {
 		myRequestsSteps.selectMyRequests();
 		myRequestsSteps.clickFifthCheckbox();
 		myRequestsSteps.applyFilter();
+		myRequestsSteps.lookupResultsTable();
 		myRequestsSteps.select_items_per_page("75");
 		myRequestsSteps.check_days_number_in_range(1, 6);
 		

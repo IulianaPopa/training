@@ -62,9 +62,17 @@ public class MyRequestsSteps extends ScenarioSteps {
 	   Assert.assertTrue("Days Number not in selected range!!!", lowValue <= Integer.parseInt(val)
 	       && highValue >= Integer.parseInt(val));
 	  }
-	
-		
 	}
+	
+	  @Step
+		 public void check_holiday_list(String aaa) {
+		  List<String> holidayList = myRequestsPage.get_holiday_list();
+
+		  for (String val : holidayList) {
+		   Assert.assertTrue("Holiday Requests not in table!!!", val.equals(aaa));
+		  }
+	  }
+		
 	
 	
 }

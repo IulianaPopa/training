@@ -30,6 +30,10 @@ public class MyRequestsPage extends PageObject {
     @FindBy(css = "select[name*='itemsPerPage']")
     private WebElementFacade selectItemsPerPage;
     
+    
+    
+   
+    
     public void clickHolidayCheckbox() {
     	element(holidayCheckbox).waitUntilVisible();
     	holidayCheckbox.click();
@@ -52,8 +56,8 @@ public class MyRequestsPage extends PageObject {
 	public void select_items_per_page(String value) {
 		selectItemsPerPage.selectByValue(value);
 		
+		
 	}
-	
    public List<String> get_days_number_list(){
 	   List<WebElement> daysList = getDriver().findElements(By.cssSelector("td[class*='day.number']"));
 	   
@@ -61,6 +65,16 @@ public class MyRequestsPage extends PageObject {
 	   
 	   for (WebElement dayElem : daysList){
 		   stringList.add(dayElem.getText());
+	   }
+	   return stringList;
+   }
+   public List<String> get_holiday_list(){
+	   List<WebElement> holidaysList = getDriver().findElements(By.cssSelector("td[class*='type']"));
+	   
+	   List<String> stringList = new ArrayList<String>();
+	   
+	   for (WebElement historyElem : holidaysList){
+		   stringList.add(historyElem.getText());
 	   }
 	   return stringList;
    }

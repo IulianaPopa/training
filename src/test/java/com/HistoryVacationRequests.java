@@ -42,6 +42,8 @@ public class HistoryVacationRequests {
 		myRequestsSteps.selectVacation();
 		myRequestsSteps.applyFilter();
 		myRequestsSteps.lookupResultsTable();
+		myRequestsSteps.select_items_per_page("75");
+		myRequestsSteps.check_holiday_list("Holiday");
 		
 		
 	}
