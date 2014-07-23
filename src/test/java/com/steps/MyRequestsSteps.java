@@ -72,7 +72,17 @@ public class MyRequestsSteps extends ScenarioSteps {
 		   Assert.assertTrue("Holiday Requests not in table!!!", val.equals(aaa));
 		  }
 	  }
-		
-	
+	  @Step
+		public void clickPendingCheckbox(){
+			myRequestsPage.clickPendingCheckbox();
+		}	
+	  @Step
+		 public void check_pending_list(String aa) {
+		  List<String> pendingList = myRequestsPage.get_pending_list();
+
+		  for (String val : pendingList) {
+		   Assert.assertTrue("Pending Requests not in table!!!", val.equals(aa));
+		  }
+	  }
 	
 }

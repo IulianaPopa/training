@@ -30,7 +30,8 @@ public class MyRequestsPage extends PageObject {
     @FindBy(css = "select[name*='itemsPerPage']")
     private WebElementFacade selectItemsPerPage;
     
-    
+    @FindBy(css="input[value='PENDING'][type='checkbox']")
+    private WebElementFacade pendingCheckbox;
     
    
     
@@ -56,6 +57,7 @@ public class MyRequestsPage extends PageObject {
 	public void select_items_per_page(String value) {
 		selectItemsPerPage.selectByValue(value);
 		
+	
 		
 	}
    public List<String> get_days_number_list(){
@@ -73,9 +75,27 @@ public class MyRequestsPage extends PageObject {
 	   
 	   List<String> stringList = new ArrayList<String>();
 	   
-	   for (WebElement historyElem : holidaysList){
-		   stringList.add(historyElem.getText());
+	   for (WebElement holidayElem : holidaysList){
+		   stringList.add(holidayElem.getText());
 	   }
 	   return stringList;
    }
+   
+   public void clickPendingCheckbox() {
+   	element(pendingCheckbox).waitUntilVisible();
+   	pendingCheckbox.click();
+   }
+   
+   public List<String> get_pending_list(){
+	   List<WebElement> pendingList = getDriver().findElements(By.cssSelector("td[class*='status']"));
+	   
+	   List<String> stringList = new ArrayList<String>();
+	   
+	   for (WebElement pendingElem : pendingList){
+		   stringList.add(pendingElem.getText());
+	   }
+	   return stringList;
+   }  
+   
 }
+
