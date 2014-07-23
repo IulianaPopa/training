@@ -67,12 +67,12 @@ public class CreateVacationTest {
 		/*myRequestsSteps.my_request();
 		myFreeDaysSteps.my_free_days();
 		freeDaysHistorySteps.free_days_history();*/
-		inboxSteps.inbox();
-		viewVacationsSteps.viewVacations();
+		//inboxSteps.inbox();
+		//viewVacationsSteps.viewVacations();
 		
-		vacationMenuSteps.my_request();
-		vacationMenuSteps.my_free_days();
-		vacationMenuSteps.free_days_history();
+		//vacationMenuSteps.my_request();
+		//vacationMenuSteps.my_free_days();
+		//vacationMenuSteps.free_days_history();
 
 	}
 }
