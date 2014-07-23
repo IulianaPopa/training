@@ -80,5 +80,14 @@ public class NewVacationRequestSteps extends ScenarioSteps {
 		startEndDateNewVacation.selectSpecialVacationReason(reason);
 	}
 	
+	@Step
+	public void select_go_to_comment() {
+		startEndDateNewVacation.click_go_to_comment();
+	}
 	
+    @Step
+	public void select_add_comment(String addComm) {
+		startEndDateNewVacation.click_add_comment(addComm);
+	}
+
 }
