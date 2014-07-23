@@ -14,17 +14,11 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import com.requirements.Application;
-import com.steps.FreeDaysHistorySteps;
 import com.steps.LoginSteps;
-import com.steps.MyFreeDaysSteps;
-import com.steps.MyRequestsSteps;
 import com.steps.NewVacationRequestSteps;
-import com.steps.InboxSteps;
-import com.steps.ViewVacationsSteps;
 import com.steps.VacationMenuSteps;
 @Story(Application.Search.SearchByKeyword.class)
-@RunWith(ThucydidesRunner.class)
-public class CreateVacationTest {
+@RunWith(ThucydidesRunner.class)public class CreateVacationTest {
 
 	@Managed(uniqueSession = true)
 	public WebDriver webdriver;
@@ -37,22 +31,6 @@ public class CreateVacationTest {
 
 	@Steps
 	NewVacationRequestSteps newVacationRequestSteps;
-
-	@Steps
-	MyRequestsSteps myRequestsSteps;
-	
-	@Steps
-	MyFreeDaysSteps myFreeDaysSteps;
-	
-	@Steps
-	FreeDaysHistorySteps freeDaysHistorySteps;
-	
-	@Steps
-	InboxSteps inboxSteps;
-	
-	@Steps
-	ViewVacationsSteps viewVacationsSteps;
-	
 	
 	@Steps
 	VacationMenuSteps vacationMenuSteps;
@@ -61,18 +39,13 @@ public class CreateVacationTest {
 		loginSteps.login("andra.farcas", "andra");
 		newVacationRequestSteps.new_request();
 		newVacationRequestSteps.select_start_date();
-		newVacationRequestSteps.select_date(7, 17, 2014);
+		newVacationRequestSteps.select_date(4, 17, 2015);
 		newVacationRequestSteps.select_end_date();
-		newVacationRequestSteps.select_date(7, 18, 2014);
-		/*myRequestsSteps.my_request();
-		myFreeDaysSteps.my_free_days();
-		freeDaysHistorySteps.free_days_history();*/
-		//inboxSteps.inbox();
-		//viewVacationsSteps.viewVacations();
-		
-		//vacationMenuSteps.my_request();
-		//vacationMenuSteps.my_free_days();
-		//vacationMenuSteps.free_days_history();
+	    newVacationRequestSteps.select_date(4, 18, 2015);
+		newVacationRequestSteps.select_vacation_type();
+		newVacationRequestSteps.select_duration_and_domain("asdfgh");
+		newVacationRequestSteps.select_institution_name("jahdwvber");
+		newVacationRequestSteps.save_request();
 
 	}
 }
