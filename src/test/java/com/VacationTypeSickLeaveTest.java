@@ -15,11 +15,10 @@ import org.openqa.selenium.WebDriver;
 
 import com.requirements.Application;
 import com.steps.LoginSteps;
-import com.steps.MyRequestsSteps;
-
+import com.steps.NewVacationRequestSteps;
 @Story(Application.Search.SearchByKeyword.class)
 @RunWith(ThucydidesRunner.class)
-public class HistoryVacationRequests {
+public class VacationTypeSickLeaveTest {
 
 	@Managed(uniqueSession = true)
 	public WebDriver webdriver;
@@ -30,21 +29,20 @@ public class HistoryVacationRequests {
 	@Steps
 	public LoginSteps loginSteps;
 
-
 	@Steps
-	MyRequestsSteps myRequestsSteps;
-	
-	
+	NewVacationRequestSteps newVacationRequestSteps;
 	@Test
 	public void createSimpleVacation() throws ParseException {
 		loginSteps.login("andra.farcas", "andra");
-		myRequestsSteps.selectMyRequests();
-		myRequestsSteps.selectVacation();
-		myRequestsSteps.applyFilter();
-		myRequestsSteps.lookupResultsTable();
-		myRequestsSteps.select_items_per_page("75");
-		myRequestsSteps.check_holiday_list("Holiday");
-		
-		
+		newVacationRequestSteps.new_request();
+		newVacationRequestSteps.select_start_date();
+		newVacationRequestSteps.select_date(4, 20, 2015);
+		newVacationRequestSteps.select_end_date();
+		newVacationRequestSteps.select_date(4, 21, 2015);
+		newVacationRequestSteps.select_vacation_type();
+		newVacationRequestSteps.select_special_vacation();
+		newVacationRequestSteps.save_request();
+
 	}
+	
 }
