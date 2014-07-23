@@ -36,13 +36,15 @@ public class fVacationTypeChildBirthTest {
 		loginSteps.login("andra.farcas", "andra");
 		newVacationRequestSteps.new_request();
 		newVacationRequestSteps.select_start_date();
-		newVacationRequestSteps.select_date(4, 22, 2015);
+		newVacationRequestSteps.select_date(4, 12, 2015);
 		newVacationRequestSteps.select_end_date();
-		newVacationRequestSteps.select_date(4, 22, 2015);
+		newVacationRequestSteps.select_date(4, 12, 2015);
 		newVacationRequestSteps.select_vacation_type();
 		newVacationRequestSteps.select_special_vacation();
 //		newVacationRequestSteps.select_special_reason();
-		newVacationRequestSteps.selectSpecialVacationReason("Funeral");
+		newVacationRequestSteps.selectSpecialVacationReason("Child birth");
+		//newVacationRequestSteps.select_go_to_comment();
+		//newVacationRequestSteps.select_add_comment("jhskdhshdskhdshd");
 		newVacationRequestSteps.save_request();
 
 	}
