@@ -25,6 +25,13 @@ public class StartEndDateNewVacation extends PageObject {
 	@FindBy(css = "input[value='CS'][type='radio']")
 	private WebElementFacade specialVacation;
 	
+	@FindBy(className=".vacationTypeChoice #_evovacation_WAR_EvoVacationportlet_specialReason>option[value='CHILD_BIRTH']")
+	private WebElementFacade specialReason;
+	
+	
+	@FindBy(css="#_evovacation_WAR_EvoVacationportlet_specialReason")
+	private WebElementFacade specialVacationDdl;
+	
 	@FindBy(css = "input.aui-button-input")
 	private WebElementFacade saveButton;
 
@@ -64,5 +71,17 @@ public class StartEndDateNewVacation extends PageObject {
 		institutionName.click();
 		institutionName.sendKeys(instName);
 	}
+	
+	public void click_special_reason() {
+		element(specialReason).waitUntilVisible();
+		specialReason.click();
+	}
+	
+	
+	public void selectSpecialVacationReason(String reason){
+		element(specialVacationDdl).selectByVisibleText(reason);
+	}
+	
+	
 	
 }

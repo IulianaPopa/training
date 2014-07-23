@@ -69,4 +69,16 @@ public class NewVacationRequestSteps extends ScenarioSteps {
 	}
 	
 	
+	@Step
+	public void select_special_reason() {
+		startEndDateNewVacation.click_special_reason();
+	}
+	
+	
+	@Step
+	public void selectSpecialVacationReason(String reason) {
+		startEndDateNewVacation.selectSpecialVacationReason(reason);
+	}
+	
+	
 }
