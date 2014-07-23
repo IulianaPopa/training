@@ -15,6 +15,7 @@ public class NewVacationRequestSteps extends ScenarioSteps {
 
 	VacationMenuPage vacationMenuPage;
 	CalendarPage calendarPage;
+	
 
 	@Step
 	public void new_request() {
@@ -42,4 +43,24 @@ public class NewVacationRequestSteps extends ScenarioSteps {
 		calendarPage.setDate(month, day, year);
 	}
 
+	@Step
+	public void select_vacation_type() {
+		startEndDateNewVacation.click_vacation_without_payment();
+	}
+	
+	@Step
+	public void save_request() {
+		startEndDateNewVacation.click_save_button();
+	}
+
+	@Step
+	public void select_duration_and_domain(String durAndDom) {
+		startEndDateNewVacation.click_duration_and_domain(durAndDom);
+	}
+	
+	@Step
+	public void select_institution_name(String instName) {
+		startEndDateNewVacation.click_institution_name(instName);
+	}
+	
 }
