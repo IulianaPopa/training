@@ -41,6 +41,25 @@ public class StartEndDateNewVacation extends PageObject {
 	@FindBy(css="#_evovacation_WAR_EvoVacationportlet_commentContent")
 	private WebElementFacade addComment;
 	
+	@FindBy(css = "input[value='CM'][type='radio']")
+	private WebElementFacade sickLeave;
+	
+	@FindBy(css = "a[href*='my-requests']")
+	private WebElementFacade myRequestsMenuItem;
+	
+	 @FindBy(css="input[value='PENDING'][type='checkbox']")
+	    private WebElementFacade pendingCheckbox;
+	    
+	    @FindBy(css="input.aui-button-input")
+	    private WebElementFacade applyButton;
+	        
+	    
+	    @FindBy(css="tr.portlet-section-header.results-header")
+	    private WebElementFacade resultsTable;
+	    
+	    @FindBy(css = "a[href*='my-free-days']")
+		private WebElementFacade myFreeDaysItem;
+
 
 	public void click_startDate() {
 		element(startDate).waitUntilVisible();
@@ -99,4 +118,36 @@ public class StartEndDateNewVacation extends PageObject {
 		addComment.click();
 		addComment.sendKeys(addComm);
 	}
+	
+	public void click_sick_leave() {
+		element(sickLeave).waitUntilVisible();
+		sickLeave.click();
+		
+	}
+	
+	public void click_my_request() {
+		element(myRequestsMenuItem).waitUntilVisible();
+		element(myRequestsMenuItem).click();
+	}
+
+	 public void click_pending_Checkbox() {
+	    	element(pendingCheckbox).waitUntilVisible();
+	    	pendingCheckbox.click();
+	    }
+	  
+	  
+	    public void click_apply_button() {
+	    	element(applyButton).waitUntilVisible();
+	    	applyButton.click();
+	    }	
+	   
+	    public void lookupResultsTable() {
+	    	element(resultsTable).waitUntilVisible();
+	    	element(resultsTable).shouldBePresent();
+	    }
+	    
+	    public void click_my_free_days() {
+			element(myFreeDaysItem).waitUntilVisible();
+			element(myFreeDaysItem).click();
+		}
 }

@@ -7,6 +7,9 @@ import net.thucydides.core.pages.WebElementFacade;
 //@DefaultUrl("http://en.wiktionary.org/wiki/Wiktionary:Main_Page")
 public class RequestsAssignedToMePage extends PageObject {
 
+	@FindBy(css = "a[href*='inbox']")
+	private WebElementFacade inboxMenuItem;
+	
 	@FindBy(css = "#_evovacation_WAR_EvoVacationportlet_evozonVacationsSearchContainer_col-rowChecker_row-1 > input")
 	private WebElementFacade selectRequest;
 
@@ -24,6 +27,14 @@ public class RequestsAssignedToMePage extends PageObject {
 
 	@FindBy(css = "input[value='Reject']")
 	private WebElementFacade rejectDispalyRequest;
+	
+	@FindBy(css = "#_evovacation_WAR_EvoVacationportlet_evozonVacationsSearchContainerPageIteratorBottom_itemsPerPage")
+	private WebElementFacade dropDownList;
+	
+	public void click_inbox() {
+		element(inboxMenuItem).waitUntilVisible();
+		element(inboxMenuItem).click();
+	}
 
 	public void click_selectRequest() {
 		element(selectRequest).waitUntilVisible();
@@ -54,4 +65,9 @@ public class RequestsAssignedToMePage extends PageObject {
 		element(rejectDispalyRequest).waitUntilVisible();
 		rejectDispalyRequest.click();
 	}
+
+	public void select_drop_down_list(String value){
+		element(dropDownList).selectByValue(value);
+	}
+	
 }

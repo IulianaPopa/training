@@ -45,6 +45,10 @@ public class VacationTypeOtherTest {
 		newVacationRequestSteps.selectSpecialVacationReason("Other");
 		newVacationRequestSteps.select_go_to_comment();
 		newVacationRequestSteps.select_add_comment("jhskdhshdskhdshd");
+		newVacationRequestSteps.select_my_request();
+		newVacationRequestSteps.select_Vacation();
+		newVacationRequestSteps.applyFilter();
+		newVacationRequestSteps.lookupResultsTable();
 		newVacationRequestSteps.save_request();
 
 	}

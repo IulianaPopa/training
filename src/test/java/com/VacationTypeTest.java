@@ -40,7 +40,7 @@ public class VacationTypeTest {
 		newVacationRequestSteps.select_end_date();
 		newVacationRequestSteps.select_date(4, 21, 2015);
 		newVacationRequestSteps.select_vacation_type();
-		newVacationRequestSteps.select_special_vacation();
+		newVacationRequestSteps.select_sick_leave();
 		newVacationRequestSteps.save_request();
 
 	}

@@ -14,17 +14,11 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import com.requirements.Application;
-import com.steps.FreeDaysHistorySteps;
 import com.steps.LoginSteps;
-import com.steps.MyFreeDaysSteps;
-import com.steps.MyRequestsSteps;
 import com.steps.NewVacationRequestSteps;
-import com.steps.RequestAssignedToMeSteps;
-import com.steps.ViewVacationsSteps;
-
 @Story(Application.Search.SearchByKeyword.class)
 @RunWith(ThucydidesRunner.class)
-public class DropDownListInboxTest {
+public class VacationTypeSickLeaveTest {
 
 	@Managed(uniqueSession = true)
 	public WebDriver webdriver;
@@ -35,21 +29,20 @@ public class DropDownListInboxTest {
 	@Steps
 	public LoginSteps loginSteps;
 
-	
 	@Steps
-	RequestAssignedToMeSteps requestAssignedToMeSteps;
-	
-
+	NewVacationRequestSteps newVacationRequestSteps;
 	@Test
 	public void createSimpleVacation() throws ParseException {
 		loginSteps.login("andra.farcas", "andra");
-		requestAssignedToMeSteps.inbox();
-		//requestAssignedToMeSteps.display_request();
-		requestAssignedToMeSteps.select_items_per_page("10");
-		
-		
-		
-		
+		newVacationRequestSteps.new_request();
+		newVacationRequestSteps.select_start_date();
+		newVacationRequestSteps.select_date(4, 20, 2015);
+		newVacationRequestSteps.select_end_date();
+		newVacationRequestSteps.select_date(4, 21, 2015);
+		newVacationRequestSteps.select_vacation_type();
+		newVacationRequestSteps.select_special_vacation();
+		newVacationRequestSteps.save_request();
 
 	}
+	
 }

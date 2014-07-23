@@ -90,4 +90,33 @@ public class NewVacationRequestSteps extends ScenarioSteps {
 		startEndDateNewVacation.click_add_comment(addComm);
 	}
 
+    @Step
+	public void select_sick_leave() {
+		startEndDateNewVacation.click_sick_leave();
+	}
+    
+    @Step
+	public void select_my_request() {
+		startEndDateNewVacation.click_my_request();
+	}
+    
+	@Step
+	public void select_Vacation() {
+		startEndDateNewVacation.click_pending_Checkbox();
+	}
+	
+	@Step
+	public void applyFilter() {
+		startEndDateNewVacation.click_apply_button();
+	}
+	
+	@Step
+	public void lookupResultsTable() {
+		startEndDateNewVacation.lookupResultsTable();
+	}
+	
+	@Step
+	public void select_my_free_days() {
+		startEndDateNewVacation.click_my_request();
+	}
 }
