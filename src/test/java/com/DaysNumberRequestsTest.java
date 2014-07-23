@@ -21,7 +21,7 @@ import com.steps.MyRequestsSteps;
 
 @Story(Application.Search.SearchByKeyword.class)
 @RunWith(ThucydidesRunner.class)
-public class DaysNumberRequests {
+public class DaysNumberRequestsTest {
 
 	@Managed(uniqueSession = true)
 	public WebDriver webdriver;

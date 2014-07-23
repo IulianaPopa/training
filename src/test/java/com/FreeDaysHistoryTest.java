@@ -14,12 +14,14 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import com.requirements.Application;
+import com.steps.FreeDaysHistorySteps;
 import com.steps.LoginSteps;
+import com.steps.MyFreeDaysSteps;
 import com.steps.MyRequestsSteps;
 
 @Story(Application.Search.SearchByKeyword.class)
 @RunWith(ThucydidesRunner.class)
-public class HistoryVacationRequests {
+public class FreeDaysHistoryTest {
 
 	@Managed(uniqueSession = true)
 	public WebDriver webdriver;
@@ -34,16 +36,18 @@ public class HistoryVacationRequests {
 	@Steps
 	MyRequestsSteps myRequestsSteps;
 	
+	@Steps
+	FreeDaysHistorySteps freeDaysHistorySteps;
 	
 	@Test
 	public void createSimpleVacation() throws ParseException {
 		loginSteps.login("andra.farcas", "andra");
-		myRequestsSteps.selectMyRequests();
-		myRequestsSteps.selectVacation();
-		myRequestsSteps.applyFilter();
-		myRequestsSteps.lookupResultsTable();
-		myRequestsSteps.select_items_per_page("75");
-		myRequestsSteps.check_holiday_list("Holiday");
+		freeDaysHistorySteps.free_days_history();
+//		myRequestsSteps.selectVacation();
+//		myRequestsSteps.applyFilter();
+//		myRequestsSteps.lookupResultsTable();
+//		myRequestsSteps.select_items_per_page("75");
+//		myRequestsSteps.check_holiday_list("Holiday");
 		
 		
 	}
