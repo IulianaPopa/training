@@ -43,8 +43,8 @@ public class VacationTypeOtherTest {
 		newVacationRequestSteps.select_special_vacation();
 //		newVacationRequestSteps.select_special_reason();
 		newVacationRequestSteps.selectSpecialVacationReason("Other");
-//		newVacationRequestSteps.select_go_to_comment();
-//		newVacationRequestSteps.select_add_comment("jhskdhshdskhdshd");
+		newVacationRequestSteps.select_go_to_comment();
+		newVacationRequestSteps.select_add_comment("jhskdhshdskhdshd");
 		newVacationRequestSteps.save_request();
 
 	}
