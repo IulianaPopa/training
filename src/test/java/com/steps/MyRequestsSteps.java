@@ -5,7 +5,6 @@ import net.thucydides.core.steps.ScenarioSteps;
 
 import com.pages.CalendarPage;
 import com.pages.MyRequestsPage;
-
 import com.pages.VacationMenuPage;
 
 @SuppressWarnings("serial")
@@ -16,18 +15,25 @@ public class MyRequestsSteps extends ScenarioSteps {
 	MyRequestsPage myRequestsPage;
 
 	@Step
-	public void my_request() {
+	public void selectMyRequests() {
 		vacationMenuPage.click_my_request();
 	}
 	
 	@Step
-	public void select_vacation() {
-		myRequestsPage.click_holidaycheckbox();
+	public void selectVacation() {
+		myRequestsPage.clickHolidayCheckbox();
 	}
 	
 	@Step
-	public void apply_filter() {
-		myRequestsPage.click_apply_button();
+	public void applyFilter() {
+		myRequestsPage.clickApplyButton();
 	}
+	
+	@Step
+	public void lookupResultsTable() {
+		myRequestsPage.lookupResultsTable();
+	}
+
+	
 
 }
