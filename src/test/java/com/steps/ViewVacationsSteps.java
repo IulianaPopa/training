@@ -23,7 +23,7 @@ public class ViewVacationsSteps extends ScenarioSteps {
 	  List<String> daysList = vacationManagementMenuPage.get_type_request_list();
 
 	  for (String val : daysList) {
-	   Assert.assertTrue("Type Requests Holiday not in selected range!!!", value!=val);
+	   Assert.assertTrue("Type Requests Holiday not in selected range!!!",value!=val);
 	  }
 }
 }

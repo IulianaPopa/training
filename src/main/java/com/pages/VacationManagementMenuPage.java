@@ -23,7 +23,7 @@ public class VacationManagementMenuPage extends PageObject {
 	}
 		
 		  public List<String> get_type_request_list(){
-			   List<WebElement> typeRequestList = getDriver().findElements(By.cssSelector("td[class*='day.number']"));
+			   List<WebElement> typeRequestList = getDriver().findElements(By.cssSelector("td[class*='type']"));
 			   
 			   List<String> stringList = new ArrayList<String>();
 			   
