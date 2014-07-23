@@ -24,7 +24,7 @@ import com.steps.ViewVacationsSteps;
 
 @Story(Application.Search.SearchByKeyword.class)
 @RunWith(ThucydidesRunner.class)
-public class InboxRejectVacationRequestsTest {
+public class RejectVacationRequestsTest {
 
 	@Managed(uniqueSession = true)
 	public WebDriver webdriver;
@@ -44,8 +44,8 @@ public class InboxRejectVacationRequestsTest {
 	public void createSimpleVacation() throws ParseException {
 		loginSteps.login("andra.farcas", "andra");
 		requestAssignedToMeSteps.inbox();
-		requestAssignedToMeSteps.select_request();
-		requestAssignedToMeSteps.reject_request();
+		requestAssignedToMeSteps.display_request();
+		requestAssignedToMeSteps.reject_display_request();
 		
 
 	}

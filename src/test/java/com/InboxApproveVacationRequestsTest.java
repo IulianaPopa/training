@@ -19,7 +19,7 @@ import com.steps.LoginSteps;
 import com.steps.MyFreeDaysSteps;
 import com.steps.MyRequestsSteps;
 import com.steps.NewVacationRequestSteps;
-import com.steps.InboxSteps;
+import com.steps.RequestAssignedToMeSteps;
 import com.steps.ViewVacationsSteps;
 
 @Story(Application.Search.SearchByKeyword.class)
@@ -37,15 +37,15 @@ public class InboxApproveVacationRequestsTest {
 
 	
 	@Steps
-	InboxSteps inboxSteps;
+	RequestAssignedToMeSteps requestAssignedToMeSteps;
 	
 
 	@Test
 	public void createSimpleVacation() throws ParseException {
 		loginSteps.login("andra.farcas", "andra");
-		inboxSteps.inbox();
-		inboxSteps.select_request();
-		inboxSteps.approve_request();
+		requestAssignedToMeSteps.inbox();
+		requestAssignedToMeSteps.select_request();
+		requestAssignedToMeSteps.approve_request();
 		
 
 	}
