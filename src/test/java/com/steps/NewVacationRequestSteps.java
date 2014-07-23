@@ -63,4 +63,10 @@ public class NewVacationRequestSteps extends ScenarioSteps {
 		startEndDateNewVacation.click_institution_name(instName);
 	}
 	
+	@Step
+	public void select_special_vacation() {
+		startEndDateNewVacation.click_special_vacation();
+	}
+	
+	
 }

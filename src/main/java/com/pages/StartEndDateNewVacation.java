@@ -22,6 +22,9 @@ public class StartEndDateNewVacation extends PageObject {
 	@FindBy(css = "input[name='institution']")
 	private WebElementFacade institutionName;
 	
+	@FindBy(css = "input[value='CS'][type='radio']")
+	private WebElementFacade specialVacation;
+	
 	@FindBy(css = "input.aui-button-input")
 	private WebElementFacade saveButton;
 
@@ -38,6 +41,11 @@ public class StartEndDateNewVacation extends PageObject {
 	public void click_vacation_without_payment() {
 		element(vacationWithoutPayment).waitUntilVisible();
 		vacationWithoutPayment.click();
+	}
+	
+	public void click_special_vacation() {
+		element(specialVacation).waitUntilVisible();
+		specialVacation.click();
 	}
 	
 	public void click_save_button() {
