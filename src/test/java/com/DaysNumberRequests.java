@@ -2,6 +2,8 @@ package com;
 
 import java.text.ParseException;
 
+
+
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
 import net.thucydides.core.annotations.Steps;
@@ -19,7 +21,7 @@ import com.steps.MyRequestsSteps;
 
 @Story(Application.Search.SearchByKeyword.class)
 @RunWith(ThucydidesRunner.class)
-public class HistoryVacationRequests {
+public class DaysNumberRequests {
 
 	@Managed(uniqueSession = true)
 	public WebDriver webdriver;
@@ -29,8 +31,6 @@ public class HistoryVacationRequests {
 
 	@Steps
 	public LoginSteps loginSteps;
-
-
 	@Steps
 	MyRequestsSteps myRequestsSteps;
 	
@@ -39,11 +39,11 @@ public class HistoryVacationRequests {
 	public void createSimpleVacation() throws ParseException {
 		loginSteps.login("andra.farcas", "andra");
 		myRequestsSteps.selectMyRequests();
-		myRequestsSteps.selectVacation();
+		myRequestsSteps.clickFifthCheckbox();
 		myRequestsSteps.applyFilter();
 		myRequestsSteps.lookupResultsTable();
 		myRequestsSteps.select_items_per_page("75");
-		myRequestsSteps.check_holiday_list("Holiday");
+		myRequestsSteps.check_days_number_in_range(1, 6);
 		
 		
 	}
