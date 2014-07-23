@@ -35,13 +35,6 @@ public class StartEndDateNewVacation extends PageObject {
 	@FindBy(css = "input.aui-button-input")
 	private WebElementFacade saveButton;
 
-	
-	@FindBy(css="div.requiredComment")
-	private WebElementFacade goToComment;
-	
-	@FindBy(css="#_evovacation_WAR_EvoVacationportlet_commentContent")
-	private WebElementFacade addComment;
-	
 	public void click_startDate() {
 		element(startDate).waitUntilVisible();
 		startDate.click();
@@ -89,16 +82,6 @@ public class StartEndDateNewVacation extends PageObject {
 		element(specialVacationDdl).selectByVisibleText(reason);
 	}
 	
-	public void click_go_to_comment() {
-		element(goToComment).waitUntilVisible();
-		goToComment.click();
-		
-	}
 	
-	public void click_add_comment(String addComm) {
-		element(addComment).waitUntilVisible();
-		addComment.click();
-		addComment.sendKeys(addComm);
-	}
 	
 }
